@@ -1,0 +1,39 @@
+// HEADER
+header{
+  display: flex;
+  justify-content: space-between;
+  .Logo{
+    background-image: linear-gradient(to-left, $blue1, $blue2);
+    margin-left: 40px;
+    h1{
+      color: $white;
+      font-size: $taille4;
+    }
+  }
+  nav{
+    background-color: $white;
+    display: flex;
+    justify-content: flex-end;
+    ul{
+      display: flex;
+      li{
+        margin: 0 20px;
+        a{
+          color: $gray4;
+        }
+      }
+      li:last-child{
+        background-image: linear-gradient(to-left, $orange1, $orange2);
+        padding: 0 20px;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 50px;
+        border-image: linear-gradient(to-left, $orange1, $orange2);
+        &:hover{
+          background-image: none;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Mise à 0 des margins
+html, body, h1, h2, h3, p, a{
+  margin: 0;
+}
+
+
+// style par défault
+ul{
+  margin: 20px 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+// Font
+body{
+  font-family: Verdana, arial, sans-serif;
+  font-size: $taille4;
+  font-weight: $fw500;
+  line-height: $lh3;
+  color: $gray4;
+}

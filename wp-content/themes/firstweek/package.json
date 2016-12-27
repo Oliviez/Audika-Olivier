@@ -1,0 +1,25 @@
+{
+  "name": "audika",
+  "version": "1.0.0",
+  "description": "maquette du site audika (made by Paul Haverlan )",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "coucou"
+  },
+  "author": "Olivier",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.6.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {}
+}
