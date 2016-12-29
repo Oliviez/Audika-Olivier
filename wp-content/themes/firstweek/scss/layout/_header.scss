@@ -1,37 +1,119 @@
 // HEADER
 header{
-  display: flex;
-  justify-content: space-between;
-  .Logo{
-    background-image: linear-gradient(to-left, $blue1, $blue2);
-    margin-left: 40px;
-    h1{
-      color: $white;
-      font-size: $taille4;
-    }
-  }
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: $nav-height;
   nav{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
     background-color: $white;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    svg{
+      width: 13vw;
+      margin-left: 40px;
+    }
     ul{
       display: flex;
       li{
         margin: 0 20px;
         a{
           color: $gray4;
+          @include fast-transition;
+          &:hover{
+            text-shadow: 0 0 0 $gray4;
+            text-decoration: underline;
+          }
         }
       }
       li:last-child{
-        background-image: linear-gradient(to-left, $orange1, $orange2);
-        padding: 0 20px;
-        border-style: solid;
-        border-width: 2px;
+        @include flx-ctr;
+        box-sizing: border-box;
+        width: 200px;
         border-radius: 50px;
-        border-image: linear-gradient(to-left, $orange1, $orange2);
-        &:hover{
-          background-image: none;
-          background-color: $white;
+        background-color: $orange2;
+        background-image: -webkit-linear-gradient(to left, $orange1, $orange2);
+        background-image: -o-linear-gradient(to left, $orange1, $orange2);
+        background-image: linear-gradient(to left, $orange1, $orange2);
+        a{
+          @include flx-ctr;
+          color: $white;
+          border-radius: 50px;
+          width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          @include fast-transition;
+          border-radius: 50px;
+          border: none;
+          &:hover{
+            color: $gray4;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+  .bg-opac{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    height: calc(100vh - #{$nav-height});
+    .main-title{
+      position: relative;
+      z-index: 0;
+      @include flx-ctr;
+      justify-content: center;
+      flex-direction: column;
+      color: $white;
+      background-image: -webkit-linear-gradient(to left, rgba(242, 154, 30, 0.8), rgba(255, 109, 64, 0.8));
+      background-image: -webkit-linear-gradient(to left, rgba(242, 154, 30, 0.8), rgba(255, 109, 64, 0.8));
+      background-image: linear-gradient(to left, rgba(242, 154, 30, 0.8), rgba(255, 109, 64, 0.8));
+      background-size: cover;
+      background-position: center, center;
+      height: calc(100vh - #{$nav-height});
+      .center{
+        @include flx-ctr;
+        flex-direction: column;
+        h2{
+          font-size: 40px;
+          font-weight: $fw600;
+          text-align: center;
+          line-height: $lh2;
+        }
+        p:nth-child(2){
+          font-size: $taille6;
+          font-weight: $fw500;
+          line-height: $lh2;
+          margin: 10px 0;
+        }
+        a{
+          color: $white;
+          font-size: $taille4;
+          font-weight: $fw500;
+          border: none;
+          border-radius: 50px;
+          margin-top: 20px;
+          padding: 5px 40px;
+          box-shadow : 2px 2px 14px -2px #282828;
+          @include fast-transition;
+          @include gradient-horizontal($blue2, $blue1, -10%, 100%);
+          &:hover{
+            @include gradient-horizontal($blue2, $blue1, 10%, 100%);
+          }
+        }
+      }
+      .savoir-plus{
+        position: absolute;
+        bottom: 20px;
+        p{
+          font-size: $taille3;
+          font-weight: $fw500;
+          text-align: center;
+        }
+        svg{
+          height: 5vh;
         }
       }
     }

@@ -1,0 +1,189 @@
+// ABOUT
+
+
+.about{
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h2{
+    font-size: $taille6;
+    color: $gray5;
+    line-height: $lh2;
+  }
+  .full{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .half{
+      width: 30vw;
+      h3{
+        font-size: $taille3;
+        text-transform: uppercase;
+        color: $orange1;
+      }
+      p{
+        font-size: $taille4;
+        line-height: $lh1;
+        span{font-weight: $fw600;}
+      }
+    }
+  }
+  .link{
+    @include flx-ctr;
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $orange2;
+    background-image: -webkit-linear-gradient(to left, $orange1, $orange2);
+    background-image: -o-linear-gradient(to left, $orange1, $orange2);
+    background-image: linear-gradient(to left, $orange1, $orange2);
+    a{
+      text-transform: uppercase;
+      @include flx-ctr;
+      color: $white;
+      border-radius: 50px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      @include fast-transition;
+      border-radius: 50px;
+      border: none;
+      &:hover{
+        color: $gray4;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+
+
+
+
+// SECTION AVANTAGES
+
+
+.benefit-section{
+  height: 50vh;
+  background-color: $gray1;
+  @include flx-ctr;
+  flex-direction: column;
+  h2{
+    color: $gray5;
+    font-size: $taille6;
+  }
+  .full{
+    display: flex;
+    justify-content: space-around;
+    .quarter{
+      width: 20vw;
+      svg{
+        height: 20vh;
+      }
+      p{
+        line-height: $lh1;
+      }
+    }
+  }
+}
+
+
+
+
+
+// SECTION MAP
+.map-section{
+  height: 70vh;
+  #map{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+// SECTION CANDIDAT
+
+
+.candidat-section{
+  @include flx-ctr;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 90vh;
+    h2{
+      font-size: $taille6;
+      color: $gray5;
+      text-transform: uppercase;
+    }
+    .full{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      .third{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 20vw;
+        img{
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          border: none;
+        }
+        h3{
+          font-weight: $fw600;
+          font-size: $taille5;
+          line-height: $lh2;
+          margin: 10px 0;
+        }
+        p:nth-child(3){
+          font-size: 20px;
+          text-transform: uppercase;
+          color: $gray2;
+          line-height: $lh2;
+        }
+        hr{
+          width: 10%;
+          margin: 8px 0 20px 0;
+        }
+        p:nth-child(5){
+          font-size: 20px;
+          font-weight: $fw500;
+          line-height: $lh2;
+          letter-spacing: $space1;
+        }
+      }
+    }
+    .link{
+      @include flx-ctr;
+      box-sizing: border-box;
+      width: 200px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: $orange2;
+      background-image: -webkit-linear-gradient(to left, $orange1, $orange2);
+      background-image: -o-linear-gradient(to left, $orange1, $orange2);
+      background-image: linear-gradient(to left, $orange1, $orange2);
+      a{
+        text-transform: uppercase;
+        @include flx-ctr;
+        color: $white;
+        border-radius: 50px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        @include fast-transition;
+        border-radius: 50px;
+        border: none;
+        &:hover{
+          color: $gray4;
+          background-color: $white;
+        }
+      }
+    }
+  }

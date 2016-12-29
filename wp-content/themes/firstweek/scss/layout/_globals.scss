@@ -15,11 +15,12 @@ a{
 }
 
 
+
 // Font
 body{
-  font-family: Verdana, arial, sans-serif;
+  font-family: "omnes-pro", Verdana, arial, sans-serif;
   font-size: $taille4;
-  font-weight: $fw500;
   line-height: $lh3;
   color: $gray4;
+  letter-spacing: $space1;
 }

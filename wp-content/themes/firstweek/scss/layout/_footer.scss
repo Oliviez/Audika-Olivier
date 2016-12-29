@@ -1,0 +1,59 @@
+footer{
+  height: 60vh;
+  background-color: $gray5;
+  .colonne{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: $lh2;
+    padding: 0 60px;
+    .logo-ico{
+      display: flex;
+      margin-top: 20px;
+      svg{
+        width:13vw;
+      }
+      .ico{
+        display: flex;
+        svg{
+          margin-left: 40px;
+        }
+      }
+    }
+    .list-link{
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      .list{
+        h4{
+          color: $white;
+        }
+        ul{
+          padding: 0;
+          li{
+            margin: 10px 0;
+            a{
+              color: $gray3;
+              @include fast-transition;
+              &:hover{
+                color: $gray2;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mention{
+      display: flex;
+      justify-content: space-between;
+      width: 20vw;
+      margin-top: 40px;
+      p{
+        font-size: $taille2;
+        color: $gray4;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

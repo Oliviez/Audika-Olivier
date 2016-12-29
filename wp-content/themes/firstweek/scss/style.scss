@@ -19,8 +19,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "_variables";
 
 
+// mixins
+@import "mixins/_mixins";
+
+
+// linear-gradient - bootstrap
+@import "bootstrap/mixins/_gradients.scss";
+
+
+// font-awesome
+@import "font-awesome/scss/font-awesome.scss";
+
 
 // layout
 @import "layout/_globals";
 @import "layout/_header";
 @import "layout/_footer";
+
+
+// Pages
+@import "pages/_home";

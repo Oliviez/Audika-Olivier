@@ -24,37 +24,10 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
  return gulp.src([
-   //   'js/pdb-video-canvas.js',
-
-       'js/scrollmagic/ScrollMagic.min.js',
-       'js/scrollmagic/plugins/animation.gsap.min.js',
-       'js/scrollmagic/plugins/jquery.ScrollMagic.min.js',
-       'js/scrollmagic/plugins/debug.addIndicators.min.js',
-       'js/TweenMax.min.js',
-       // 'js/ScrollToPlugin.min.js',
-       'js/pdb-init.js',
-       // 'js/pdb-video-blur.js',
-       'js/pdb-video-background.js',
-       'js/pdb-add-menu-img.js',
-       'js/pdb-open-menu.js',
-       'js/pdb-scroll-to.js',
-       'js/pdb-show.js',
-       'js/pdb-carousels.js',
-       // 'js/pdb-parallax.js',
-       'js/pdb-box.js',
-       'js/pdb-tabs.js',
-       'js/pdb-active-on-scroll.js',
-       'js/pdb-numeric-input.js',
-       'js/pdb-hover-spaces.js',
-       'js/pdb-landing-parallax.js',
-       // 'js/pdb-landing.js',
-       'js/pdb-fixed-nav.js',
-       'js/pdb-img-stack.js',
-       'js/pdb-progress.js',
-       'js/pdb-dropdown.js',
+      'js/fw.js',
    ])
    .pipe(sourcemaps.init())
-   .pipe(concat('pdb.js'))
+   .pipe(concat('fw.js'))
    .pipe(gulp.dest('dist'))
    .pipe(uglify())
    .pipe(rename({ extname: '.min.js' }))

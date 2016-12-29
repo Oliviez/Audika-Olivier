@@ -1,0 +1,9 @@
+@mixin flx-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fast-transition {
+  transition: linear 0.2s;
+}
