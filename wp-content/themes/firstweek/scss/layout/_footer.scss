@@ -1,27 +1,64 @@
 footer{
-  height: 60vh;
+  min-height: 60vh;
   background-color: $gray5;
   .colonne{
     height: 100%;
     display: flex;
     flex-direction: column;
     line-height: $lh2;
-    padding: 0 60px;
+    padding: 0 80px;
     .logo-ico{
       display: flex;
-      margin-top: 20px;
-      svg{
-        width:13vw;
+      flex-wrap: wrap;
+      margin: 40px 0;
+      img{
+        width: 250px;
       }
       .ico{
         display: flex;
-        svg{
-          margin-left: 40px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 60px;
+        .circle{
+          @include flx-ctr;
+          margin-left: 20px;
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          span{
+            color: white;
+            font-size: $taille6;
+          }
+        }
+        .facebook{
+          background-color: $facebook;
+          &:hover{
+            box-shadow: 0 0 2px $facebook;
+          }
+        }
+        .twitter{
+          background-color: $twitter;
+          &:hover{
+            box-shadow: 0 0 2px $twitter;
+          }
+        }
+        .linkedin{
+          background-color: $linkedin;
+          &:hover{
+            box-shadow: 0 0 2px $linkedin;
+          }
+        }
+        .viadeo{
+          background-color: $viadeo;
+          &:hover{
+            box-shadow: 0 0 2px $viadeo;
+          }
         }
       }
     }
     .list-link{
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin: 20px 0;
       .list{

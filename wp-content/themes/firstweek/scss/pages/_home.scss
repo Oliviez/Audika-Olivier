@@ -2,7 +2,7 @@
 
 
 .about{
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -19,9 +19,15 @@
     .half{
       width: 30vw;
       h3{
-        font-size: $taille3;
+        font-size: $taille4;
         text-transform: uppercase;
         color: $orange1;
+        display: flex;
+        align-items: center;
+        span{
+          font-size: $taille5;
+          margin-right: 10px;
+        }
       }
       p{
         font-size: $taille4;
@@ -62,29 +68,40 @@
 
 
 
-// SECTION AVANTAGES
+// SECTION MAP
 
 
-.benefit-section{
-  height: 50vh;
-  background-color: $gray1;
-  @include flx-ctr;
-  flex-direction: column;
-  h2{
-    color: $gray5;
-    font-size: $taille6;
+.map-section{
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  .map{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
   }
-  .full{
-    display: flex;
-    justify-content: space-around;
-    .quarter{
-      width: 20vw;
-      svg{
-        height: 20vh;
-      }
-      p{
-        line-height: $lh1;
-      }
+  a.offres{
+    position: relative;
+    z-index: 1;
+    color: $white;
+    font-size: $taille4;
+    font-weight: $fw500;
+    border: none;
+    border-radius: 50px;
+    margin: 50px 0;
+    padding: 5px 40px;
+    box-shadow : 2px 2px 14px -2px #282828;
+    @include fast-transition;
+    @include gradient-horizontal($blue2, $blue1, 0%, 100%);
+    &:hover{
+      @include gradient-horizontal($blue2, $blue1, 10%, 100%);
     }
   }
 }
@@ -92,13 +109,38 @@
 
 
 
+// SECTION AVANTAGES
 
-// SECTION MAP
-.map-section{
-  height: 70vh;
-  #map{
+
+.benefit-section{
+  min-height: 50vh;
+  background-color: $gray1;
+  @include flx-ctr;
+  flex-direction: column;
+  padding: 0 80px;
+  h2{
+    color: $gray5;
+    font-size: $taille6;
+  }
+  .full{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
-    height: 100%;
+    .quarter{
+      margin: 40px 0;
+      @include flx-ctr;
+      flex-direction: column;
+      width: 20vw;
+      img{
+        width: 100px;
+        margin: 20px 0;
+      }
+      p{
+        line-height: $lh1;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -114,7 +156,7 @@
   @include flx-ctr;
   justify-content: space-around;
   flex-direction: column;
-  height: 90vh;
+  min-height: 90vh;
     h2{
       font-size: $taille6;
       color: $gray5;
@@ -122,6 +164,7 @@
     }
     .full{
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
       width: 100%;
@@ -143,7 +186,7 @@
           margin: 10px 0;
         }
         p:nth-child(3){
-          font-size: 20px;
+          font-size: $taille4;
           text-transform: uppercase;
           color: $gray2;
           line-height: $lh2;

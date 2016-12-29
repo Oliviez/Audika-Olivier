@@ -1,23 +1,25 @@
 // HEADER
 header{
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: $nav-height;
   nav{
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     width: 100%;
     background-color: $white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    svg{
-      width: 13vw;
+    img{
+      width: 200px;
       margin-left: 40px;
     }
     ul{
       display: flex;
+      flex-wrap: wrap;
       li{
         margin: 0 20px;
         a{
@@ -25,7 +27,6 @@ header{
           @include fast-transition;
           &:hover{
             text-shadow: 0 0 0 $gray4;
-            text-decoration: underline;
           }
         }
       }
@@ -58,7 +59,7 @@ header{
   .bg-opac{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center, center;
+    background-position: center;
     height: calc(100vh - #{$nav-height});
     .main-title{
       position: relative;
@@ -98,7 +99,7 @@ header{
           padding: 5px 40px;
           box-shadow : 2px 2px 14px -2px #282828;
           @include fast-transition;
-          @include gradient-horizontal($blue2, $blue1, -10%, 100%);
+          @include gradient-horizontal($blue2, $blue1, 0%, 100%);
           &:hover{
             @include gradient-horizontal($blue2, $blue1, 10%, 100%);
           }
@@ -106,14 +107,22 @@ header{
       }
       .savoir-plus{
         position: absolute;
-        bottom: 20px;
+        bottom: 50px;
+        @include flx-ctr;
+        flex-direction: column;
         p{
-          font-size: $taille3;
+          font-size: $taille4;
           font-weight: $fw500;
           text-align: center;
         }
-        svg{
-          height: 5vh;
+        span{
+          font-size: $taille5*2;
+          @include fast-transition;
+          &:hover{
+            cursor: pointer;
+            position: relative;
+            bottom: 2px;
+          }
         }
       }
     }
