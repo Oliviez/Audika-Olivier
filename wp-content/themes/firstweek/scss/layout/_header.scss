@@ -13,6 +13,22 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    .annexe{
+      background-color: $gray3;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      p, a{
+        color: $gray1;
+        line-height: $lh1;
+        text-transform: uppercase;
+      }
+      a:hover{
+        color: $white;
+        text-decoration: underline;
+      }
+    }
     img{
       width: 200px;
       margin-left: 40px;

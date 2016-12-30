@@ -33,6 +33,11 @@
     <header class="main-header to-blur" role="banner">
 
       <nav>
+        <div class="annexe">
+          <p>Les sites du groupe: <a href="#">Audika France</a></p>
+          <a href="#">Vous songez à <strong>céder</strong> votre centre ?</a>
+        </div>
+
         <img src="<? echo get_template_directory_uri(); ?>/svg/logo.svg" alt="">
         <?php
             wp_nav_menu( array(
